@@ -6,12 +6,10 @@
   <title>Amin Mraidi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <div class="grain"></div>
 
   <div class="layout">
 
@@ -22,11 +20,17 @@
         <div class="profile-block">
           <div class="avatar-wrap">
             <img src="resources/pic.jpg" alt="Amin Mraidi" class="avatar" />
-            <div class="avatar-ring"></div>
           </div>
           <h1 class="name">Amin Mraidi</h1>
-          <p class="tagline">Computational Neuroscience<br/>& Biologically Inspired AI</p>
+          <p class="tagline">Computational Neuroscience &amp; Biologically Inspired AI</p>
         </div>
+
+        <nav class="sidebar-nav">
+          <button class="nav-btn active" data-tab="profile">Profile</button>
+          <button class="nav-btn" data-tab="background">Education &amp; Experience</button>
+          <button class="nav-btn" data-tab="publications">Publications &amp; Certifications</button>
+          <button class="nav-btn" data-tab="projects">Projects</button>
+        </nav>
 
         <div class="contact-block">
           <a href="mailto:amine.mraidi@outlook.com" class="contact-item">
@@ -43,9 +47,25 @@
           </div>
         </div>
 
-        <div class="sidebar-section">
-          <h3 class="sidebar-label">Academic Interests</h3>
-          <ul class="interest-list">
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- ======== TAB: PROFILE ======== -->
+      <div class="tab-panel active" id="tab-profile">
+
+        <div class="panel-section">
+          <h2 class="section-title">Profile</h2>
+          <p class="profile-text">
+            Recent MSc AI graduate with a focus on computational neuroscience and a strong interest in biologically inspired computation and continuous-time information processing.
+          </p>
+        </div>
+
+        <div class="panel-section">
+          <h2 class="section-title">Academic Interests</h2>
+          <ul class="interest-list-main">
             <li>Biologically plausible learning algorithms</li>
             <li>Meta-learning &amp; plasticity</li>
             <li>SNNs in reinforcement learning</li>
@@ -54,244 +74,273 @@
           </ul>
         </div>
 
-        <div class="sidebar-section">
-          <h3 class="sidebar-label">Certifications</h3>
-          <p class="cert">NVIDIA Fundamentals of Deep Learning</p>
-          <p class="cert">Microsoft MIT Python Certificate</p>
+        <div class="panel-section">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h4 class="skill-category">Programming</h4>
+              <div class="skill-items">
+                <span class="skill-pill">Python <em>3yr</em></span>
+                <span class="skill-pill">Java <em>3yr</em></span>
+                <span class="skill-pill">SQL <em>2yr</em></span>
+                <span class="skill-pill">C/C++ <em>1yr</em></span>
+                <span class="skill-pill">JavaScript <em>1yr</em></span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4 class="skill-category">ML &amp; AI</h4>
+              <div class="skill-items">
+                <span class="skill-pill">Deep Learning</span>
+                <span class="skill-pill">Reinforcement Learning</span>
+                <span class="skill-pill">Spiking Neural Networks</span>
+                <span class="skill-pill">Multi-agent Systems</span>
+                <span class="skill-pill">Statistical Models</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4 class="skill-category">Libraries</h4>
+              <div class="skill-items">
+                <span class="skill-pill">PyTorch</span>
+                <span class="skill-pill">NumPy</span>
+                <span class="skill-pill">snnTorch</span>
+                <span class="skill-pill">Scikit-learn</span>
+                <span class="skill-pill">Matplotlib</span>
+                <span class="skill-pill">Pygame</span>
+                <span class="skill-pill">React</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4 class="skill-category">NLP</h4>
+              <div class="skill-items">
+                <span class="skill-pill">Transformer Architectures</span>
+                <span class="skill-pill">RAG</span>
+                <span class="skill-pill">LangChain</span>
+                <span class="skill-pill">LLaMA</span>
+                <span class="skill-pill">Multimodal Models</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4 class="skill-category">Tools</h4>
+              <div class="skill-items">
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">Linux</span>
+                <span class="skill-pill">Jupyter</span>
+                <span class="skill-pill">Pandas</span>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <nav class="sidebar-nav">
-          <a href="#education">Education</a>
-          <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-        </nav>
 
       </div>
-    </aside>
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
+      <!-- ======== TAB: EDUCATION & EXPERIENCE ======== -->
+      <div class="tab-panel" id="tab-background">
 
-      <div class="intro-banner">
-        <p>Recent MSc AI graduate with a focus on computational neuroscience and a strong interest in biologically inspired computation and continuous-time information processing.</p>
+        <div class="panel-section">
+          <h2 class="section-title">Education</h2>
+
+          <div class="edu-item">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">MSc Artificial Intelligence</h3>
+                <p class="edu-school">Eötvös Loránd University &nbsp;·&nbsp; Budapest, Hungary</p>
+              </div>
+              <div class="edu-meta">
+                <span class="edu-date">Sep 2022 – Feb 2025</span>
+                <span class="edu-gpa">GPA 4.39 / 5</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">BSc Computer Science</h3>
+                <p class="edu-school">University of Debrecen &nbsp;·&nbsp; Debrecen, Hungary</p>
+              </div>
+              <div class="edu-meta">
+                <span class="edu-date">Sep 2019 – Jul 2022</span>
+                <span class="edu-gpa">GPA 4.02 / 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h2 class="section-title">Experience</h2>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Analyst</h3>
+                <p class="exp-org">ConsumerCentrix &nbsp;·&nbsp; Budapest, Hungary</p>
+              </div>
+              <div class="exp-meta">
+                <span>Oct 2024 – Aug 2025</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Identified gender-disaggregated economic indicators and conducted secondary research on developing economies to support country-level WE-FI initiatives.</li>
+              <li>Led an internal review of knowledge management practices, producing a structured action plan to reduce fragmentation in shared files and workflows.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">University AI Summer Lab</h3>
+                <p class="exp-org">Eötvös Loránd University &nbsp;·&nbsp; Budapest, Hungary</p>
+              </div>
+              <div class="exp-meta">
+                <span>Jun 2024 – Aug 2024</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Developed custom RL environments using Gymnasium, Pygame, and Pymunk to enable controlled experimentation on a 2D navigation task.</li>
+              <li>Conducted research on Spiking Neural Network models, achieving 85% of baseline rewards while reducing convergence time by 50% for SNN policies.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
 
-      <!-- EDUCATION -->
-      <section id="education" class="section">
-        <h2 class="section-title"><span class="mono">01.</span> Education</h2>
+      <!-- ======== TAB: PUBLICATIONS & CERTIFICATIONS ======== -->
+      <div class="tab-panel" id="tab-publications">
 
-        <div class="edu-item">
-          <div class="edu-header">
-            <div>
-              <h3 class="edu-degree">MSc Artificial Intelligence</h3>
-              <p class="edu-school">Eötvös Loránd University</p>
+        <div class="panel-section">
+          <h2 class="section-title">Publications</h2>
+
+          <div class="pub-item">
+            <a href="https://ieeexplore.ieee.org/document/11424934" target="_blank" class="pub-title">
+              Evaluating Spiking Neural Networks in Reinforcement Learning for Robotic Navigation
+              <span class="ext-link">↗</span>
+            </a>
+            <p class="pub-meta">Proc. SCC25, Mar 2026 &nbsp;·&nbsp; DOI: 10.1109/SCC66964.2025.11424934</p>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h2 class="section-title">Certifications</h2>
+          <div class="cert-list">
+            <div class="cert-item">
+              <p class="cert-name">NVIDIA Fundamentals of Deep Learning</p>
             </div>
-            <div class="edu-meta">
-              <span class="edu-location">Budapest, Hungary</span>
-              <span class="edu-date">Sep 2022 – Feb 2025</span>
-              <span class="gpa-badge">GPA 4.39 / 5</span>
+            <div class="cert-item">
+              <p class="cert-name">Microsoft MIT Python Certificate</p>
             </div>
           </div>
         </div>
 
-        <div class="edu-item">
-          <div class="edu-header">
-            <div>
-              <h3 class="edu-degree">BSc Computer Science</h3>
-              <p class="edu-school">University of Debrecen</p>
-            </div>
-            <div class="edu-meta">
-              <span class="edu-location">Debrecen, Hungary</span>
-              <span class="edu-date">Sep 2019 – Jul 2022</span>
-              <span class="gpa-badge">GPA 4.02 / 5</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
 
-      <!-- PUBLICATIONS -->
-      <section id="publications" class="section">
-        <h2 class="section-title"><span class="mono">02.</span> Publications</h2>
+      <!-- ======== TAB: PROJECTS ======== -->
+      <div class="tab-panel" id="tab-projects">
 
-        <div class="pub-item">
-          <a href="https://ieeexplore.ieee.org/document/11424934" target="_blank" class="pub-title">
-            Evaluating Spiking Neural Networks in Reinforcement Learning for Robotic Navigation
-            <span class="ext-link">↗</span>
-          </a>
-          <p class="pub-meta">Proc. SCC25, Mar 2026 &nbsp;·&nbsp; DOI: 10.1109/SCC66964.2025.11424934</p>
-        </div>
-      </section>
+        <div class="panel-section">
+          <h2 class="section-title">Projects</h2>
 
-      <!-- EXPERIENCE -->
-      <section id="experience" class="section">
-        <h2 class="section-title"><span class="mono">03.</span> Experience</h2>
+          <div class="project-grid">
 
-        <div class="exp-item">
-          <div class="exp-header">
-            <div>
-              <h3 class="exp-role">Analyst</h3>
-              <p class="exp-org">ConsumerCentrix</p>
-            </div>
-            <div class="exp-meta">
-              <span>Budapest, Hungary</span>
-              <span>Oct 2024 – Aug 2025</span>
-            </div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Identified gender-disaggregated economic indicators and conducted secondary research on developing economies to support country-level WE-FI initiatives.</li>
-            <li>Led an internal review of knowledge management practices, producing a structured action plan to reduce fragmentation in shared files and workflows.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-header">
-            <div>
-              <h3 class="exp-role">University AI Summer Lab</h3>
-              <p class="exp-org">Eötvös Loránd University</p>
-            </div>
-            <div class="exp-meta">
-              <span>Budapest, Hungary</span>
-              <span>Jun 2024 – Aug 2024</span>
-            </div>
-          </div>
-          <ul class="exp-bullets">
-            <li>Developed custom RL environments using Gymnasium, Pygame, and Pymunk to enable controlled experimentation on a 2D navigation task.</li>
-            <li>Conducted research on Spiking Neural Network models, achieving 85% of baseline rewards while reducing convergence time by 50% for SNN policies.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="section">
-        <h2 class="section-title"><span class="mono">04.</span> Projects</h2>
-
-        <div class="project-grid">
-
-          <div class="project-card">
-            <div class="project-card-header">
-              <h3 class="project-name">
-                <a href="https://github.com/NotEnoughSnow/NeuroSandbox" target="_blank">
-                  NeuroSandbox <span class="ext-link">↗</span>
-                </a>
-              </h3>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">NumPy</span>
-                <span class="tag">PyTorch</span>
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3 class="project-name">
+                  <a href="https://github.com/NotEnoughSnow/lorenz-spiking-reservoir" target="_blank">
+                    Lorenz Spiking Reservoir <span class="ext-link">↗</span>
+                  </a>
+                </h3>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">NumPy</span>
+                </div>
               </div>
+              <p class="project-desc">Predicting the lorenz attractor using a spiking reservoir and studying the effects of various bio-plausible methods on learning.</p>
             </div>
-            <p class="project-desc">A collection of computational neuroscience implementations and studies — LIF neurons, spiking dynamics, network models, and research paper replications. An ongoing sandbox for learning and exploration.</p>
-          </div>
 
-          <div class="project-card">
-            <div class="project-card-header">
-              <h3 class="project-name">
-                <a href="https://github.com/NotEnoughSnow/RAG-scene-generator" target="_blank">
-                  Scene-to-Image Generation Platform <span class="ext-link">↗</span>
-                </a>
-              </h3>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">Next.js</span>
-                <span class="tag">RAG</span>
-                <span class="tag">SD1.5</span>
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3 class="project-name">
+                  <a href="https://github.com/NotEnoughSnow/NeuroSandbox" target="_blank">
+                    NeuroSandbox <span class="ext-link">↗</span>
+                  </a>
+                </h3>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">NumPy</span>
+                  <span class="tag">PyTorch</span>
+                </div>
               </div>
+              <p class="project-desc">A collection of computational neuroscience implementations and studies — LIF neurons, spiking dynamics, network models, and research paper replications. An ongoing sandbox for learning and exploration.</p>
             </div>
-            <p class="project-desc">Interactive platform that generates images from textual scene descriptions using Stable Diffusion and retrieval-augmented generation.</p>
-          </div>
 
-          <div class="project-card">
-            <div class="project-card-header">
-              <h3 class="project-name">
-                <a href="https://github.com/NotEnoughSnow/kart-simulator" target="_blank">
-                  Racing Simulator + SNN Control <span class="ext-link">↗</span>
-                </a>
-              </h3>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">PyTorch</span>
-                <span class="tag">snnTorch</span>
-                <span class="tag">Pygame</span>
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3 class="project-name">
+                  <a href="https://github.com/NotEnoughSnow/RAG-scene-generator" target="_blank">
+                    Scene-to-Image Generation Platform <span class="ext-link">↗</span>
+                  </a>
+                </h3>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Next.js</span>
+                  <span class="tag">RAG</span>
+                  <span class="tag">SD1.5</span>
+                </div>
               </div>
+              <p class="project-desc">Interactive platform that generates images from textual scene descriptions using Stable Diffusion and retrieval-augmented generation.</p>
             </div>
-            <p class="project-desc">A test-bed framework for integrating and testing various SNN methods in an RL setting. Includes a custom racing simulator built with Pygame &amp; Pymunk.</p>
-          </div>
 
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="section">
-        <h2 class="section-title"><span class="mono">05.</span> Technical Skills</h2>
-
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h4 class="skill-category">Programming</h4>
-            <div class="skill-items">
-              <span class="skill-pill">Python <em>3yr</em></span>
-              <span class="skill-pill">Java <em>3yr</em></span>
-              <span class="skill-pill">SQL <em>2yr</em></span>
-              <span class="skill-pill">C/C++ <em>1yr</em></span>
-              <span class="skill-pill">JavaScript <em>1yr</em></span>
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3 class="project-name">
+                  <a href="https://github.com/NotEnoughSnow/kart-simulator" target="_blank">
+                    Racing Simulator + SNN Control <span class="ext-link">↗</span>
+                  </a>
+                </h3>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">PyTorch</span>
+                  <span class="tag">snnTorch</span>
+                  <span class="tag">Pygame</span>
+                </div>
+              </div>
+              <p class="project-desc">A test-bed framework for integrating and testing various SNN methods in an RL setting. Includes a custom racing simulator built with Pygame &amp; Pymunk.</p>
             </div>
-          </div>
 
-          <div class="skill-group">
-            <h4 class="skill-category">ML &amp; AI</h4>
-            <div class="skill-items">
-              <span class="skill-pill">Deep Learning</span>
-              <span class="skill-pill">Reinforcement Learning</span>
-              <span class="skill-pill">Spiking Neural Networks</span>
-              <span class="skill-pill">Multi-agent Systems</span>
-              <span class="skill-pill">Statistical Models</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h4 class="skill-category">Libraries</h4>
-            <div class="skill-items">
-              <span class="skill-pill">PyTorch</span>
-              <span class="skill-pill">NumPy</span>
-              <span class="skill-pill">snnTorch</span>
-              <span class="skill-pill">Scikit-learn</span>
-              <span class="skill-pill">Matplotlib</span>
-              <span class="skill-pill">Pygame</span>
-              <span class="skill-pill">React</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h4 class="skill-category">NLP</h4>
-            <div class="skill-items">
-              <span class="skill-pill">Transformer Architectures</span>
-              <span class="skill-pill">RAG</span>
-              <span class="skill-pill">LangChain</span>
-              <span class="skill-pill">LLaMA</span>
-              <span class="skill-pill">Multimodal Models</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h4 class="skill-category">Tools</h4>
-            <div class="skill-items">
-              <span class="skill-pill">Git</span>
-              <span class="skill-pill">Linux</span>
-              <span class="skill-pill">Jupyter</span>
-              <span class="skill-pill">Pandas</span>
-            </div>
           </div>
         </div>
-      </section>
 
-      <footer class="footer">
-        <p>Amin Mraidi &nbsp;·&nbsp; <a href="https://github.com/NotEnoughSnow" target="_blank">github.com/NotEnoughSnow</a></p>
-      </footer>
+      </div>
 
     </main>
   </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.nav-btn');
+    const panels  = document.querySelectorAll('.tab-panel');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        // Update buttons
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Swap panels
+        panels.forEach(p => {
+          if (p.id === 'tab-' + target) {
+            p.classList.add('active');
+          } else {
+            p.classList.remove('active');
+          }
+        });
+
+        // Scroll main back to top on tab switch
+        document.querySelector('.main').scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
