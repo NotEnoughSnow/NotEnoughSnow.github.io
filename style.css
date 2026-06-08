@@ -481,17 +481,68 @@ body {
   gap: 0.9rem;
 }
 
+/* Collapsed state: faint purple-to-red gradient */
 .project-card {
-  background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 7px;
-  padding: 1.2rem 1.4rem;
-  transition: border-color 0.2s, background 0.2s;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  background:
+    linear-gradient(135deg,
+      rgba(160, 100, 200, 0.08) 0%,
+      rgba(210, 80, 80, 0.08) 100%
+    ),
+    var(--bg-card);
+  /* Subtle gradient border effect via box-shadow */
+  position: relative;
 }
 
-.project-card:hover {
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg,
+    rgba(160, 100, 200, 0.13) 0%,
+    rgba(210, 80, 80, 0.13) 100%
+  );
+  opacity: 1;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* Expanded: solid grey, gradient gone */
+.project-card.expanded {
+  background: #d0d5e7;
+  cursor: default;
+}
+
+.project-card.expanded::before {
+  opacity: 0;
+}
+
+.project-card:not(.expanded):hover {
   border-color: var(--border-strong);
-  background: var(--bg-card-hover);
+  box-shadow: 0 2px 12px rgba(160, 80, 180, 0.1);
+}
+
+/* Toggle hint */
+.card-toggle-hint {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.07em;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+/* Collapsed section wrapper */
+.card-collapsed {
+  padding: 1.2rem 1.4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card-header {
@@ -521,6 +572,73 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
+}
+
+/* Expanded content — animates open/shut via JS height */
+.card-expanded-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 0px solid var(--border);
+}
+
+.project-card.expanded .card-expanded-content {
+  border-top-width: 1px;
+}
+
+.card-media {
+  padding: 1.2rem 1.4rem 0.8rem;
+}
+
+.media-placeholder {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border: 1px dashed var(--border-strong);
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+  background: var(--bg);
+}
+
+/* Screenshot gallery (when images are added) */
+.card-media img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+/* Video embed */
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.card-detail {
+  padding: 0.5rem 1.4rem 1.4rem;
+}
+
+.card-detail-text {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.list {
+  padding: 0.75rem 2.5rem;
 }
 
 .tag {

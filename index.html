@@ -263,104 +263,211 @@
 
           <div class="project-grid">
 
-            <div class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">
-                  <a href="https://github.com/NotEnoughSnow/SNN-Navigation-Control-Task" target="_blank">
-                    Racing Simulator + SNN Control <span class="ext-link">↗</span>
-                  </a>
-                </h3>
-                <div class="project-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">PyTorch</span>
-                  <span class="tag">snnTorch</span>
-                  <span class="tag">Pygame</span>
+            <!-- KART SIMULATOR -->
+            <div class="project-card" data-card>
+              <div class="card-collapsed">
+                <span class="card-toggle-hint">click to expand</span>
+                <div class="project-card-header">
+                  <h3 class="project-name">
+                    <a href="https://github.com/NotEnoughSnow/kart-simulator" target="_blank" class="project-link">
+                      Racing Simulator + SNN Control <span class="ext-link">↗</span>
+                    </a>
+                  </h3>
+                  <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">snnTorch</span>
+                    <span class="tag">Pygame</span>
+                  </div>
+                </div>
+                <p class="project-desc">A test-bed framework for integrating and testing various SNN methods in an RL setting. Includes a custom racing simulator built with Pygame &amp; Pymunk.</p>
+              </div>
+              <div class="card-expanded-content">
+                <div class="card-detail">
+                  <p class="card-detail-text">
+                  This project was submitted as part of a thesis research project during my Masters degree in Artificial Intelligence at ELTE university, Budapest. 
+                  The earliest version of the simulation started as a course project during the fall semester of 2023.
+                  <br>
+                  The primary objective of this research is to investigate the viability of Spiking Neural Networks (SNNs) within the context of Reinforcement Learning (RL). 
+                  Specifically, it seeks to evaluate whether SNNs can perform effectively in RL settings and to explore their potential advantages over traditional Artificial Neural Networks (ANNs). 
+                  Conducting this study in a simulated environment provides the necessary control for experimentation and analysis while also addressing challenges associated with real-world applications.
+
+                    <ul class="card-detail-text list">
+                      <li>Compare SNNs to ANNs in the context of RL and robotics in order to explore their advantages and limitations.</li>
+                      <li>Explore various SOTA methodologies in relation to SNNs and computational neuroscience within the outlined context.</li>
+                      <li>Explore the sim2real gap by deploying trained models into robotics.</li>
+                      <li>Explore the effeciency and challenges of neuromorphic hardware.</li>
+
+                    </ul>
+
+
+                  </p>
+                  <div class="video-wrap">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/a3TkSxlVKyY?si=IbKtV3vFJ77lompJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="card-media">
+                  <img src="resources/latest.gif">
+                  <img src="resources/gazebo.png">
                 </div>
               </div>
-              <p class="project-desc">A test-bed framework for integrating and testing various SNN methods in an RL setting. Includes a custom racing simulator built with Pygame &amp; Pymunk.</p>
             </div>
 
-            <div class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">
-                  <a href="https://github.com/NotEnoughSnow/lorenz-spiking-reservoir" target="_blank">
-                    Lorenz Spiking Reservoir <span class="ext-link">↗</span>
-                  </a>
-                </h3>
-                <div class="project-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">NumPy</span>
+            <!-- Lorenz Spiking Reservoir -->
+            <div class="project-card" data-card>
+              <div class="card-collapsed">
+                <span class="card-toggle-hint">click to expand</span>
+                <div class="project-card-header">
+                  <h3 class="project-name">
+                    <a href="https://github.com/NotEnoughSnow/lorenz-spiking-reservoir" target="_blank" class="project-link">
+                      Lorenz Spiking Reservoir <span class="ext-link">↗</span>
+                    </a>
+                  </h3>
+                  <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">NumPy</span>
+                  </div>
                 </div>
+                <p class="project-desc">Predicting the lorenz attractor using a spiking reservoir and studying the effects of various bio-plausible methods on learning.</p>
               </div>
-              <p class="project-desc">Predicting the lorenz attractor using a spiking reservoir and studying the effects of various bio-plausible methods on learning.</p>
+              <div class="card-expanded-content">
+
+                <div class="card-detail">
+                  <p class="card-detail-text">A from-scratch exploration of spiking neural networks, reservoir computing, and bio-plausible learning rules. 
+                    The project is built with neuromorphic hardware constraints in mind: the learning rules explored here are online and local, motivated by the fact that backpropagation through time is unavailable on physical neuromorphic substrates. 
+                    The shift from offline readout training to online eligibility-trace-based learning reflects this constraint directly, and serves as an entry point into understanding the broader training challenges of hardware-deployed spiking networks. 
+                    All implementations are built from scratch in NumPy, deliberately avoiding autograd or high-level SNN libraries where possible.</p>
+                </div>
+                <div class="card-media">
+                  <img src="resources/lorenz.png">
+                  <img src="resources/RSTDP.png">
+
+                </div>
+
+              </div>
             </div>
 
-            <div class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">
-                  <a href="https://github.com/NotEnoughSnow/NeuroSandbox" target="_blank">
-                    NeuroSandbox <span class="ext-link">↗</span>
-                  </a>
-                </h3>
-                <div class="project-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">NumPy</span>
-                  <span class="tag">PyTorch</span>
+            <!-- NEUROSANDBOX -->
+            <div class="project-card" data-card>
+              <div class="card-collapsed">
+                <span class="card-toggle-hint">click to expand</span>
+                <div class="project-card-header">
+                  <h3 class="project-name">
+                    <a href="https://github.com/NotEnoughSnow/NeuroSandbox" target="_blank" class="project-link">
+                      NeuroSandbox <span class="ext-link">↗</span>
+                    </a>
+                  </h3>
+                  <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">PyTorch</span>
+
+                  </div>
+                </div>
+                <p class="project-desc">A collection of computational neuroscience implementations, studies, and explorations.</p>
+              </div>
+              <div class="card-expanded-content">
+                <div class="card-detail">
+                  <p class="card-detail-text">NeuroSandbox is an evolving repository where I study and implement concepts from computational neuroscience and neuroinformatics, ranging from foundational neuron models to replications of published research.</p>
+                </div>
+                <div class="card-media">
+                  <img src="resources/neuron.PNG">
                 </div>
               </div>
-              <p class="project-desc">A collection of computational neuroscience implementations and studies — LIF neurons, spiking dynamics, network models, and research paper replications. An ongoing sandbox for learning and exploration.</p>
             </div>
 
-            <div class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">
-                  <a href="https://github.com/NotEnoughSnow/RAG-scene-generator" target="_blank">
-                    Scene-to-Image Generation Platform <span class="ext-link">↗</span>
-                  </a>
-                </h3>
-                <div class="project-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">FastAPI</span>
-                  <span class="tag">Next.js</span>
-                  <span class="tag">RAG</span>
-                  <span class="tag">SD1.5</span>
+            <!-- RAG SCENE GENERATOR -->
+            <div class="project-card" data-card>
+              <div class="card-collapsed">
+                <span class="card-toggle-hint">click to expand</span>
+                <div class="project-card-header">
+                  <h3 class="project-name">
+                    <a href="https://github.com/NotEnoughSnow/RAG-scene-generator" target="_blank" class="project-link">
+                      Scene-to-Image Generation Platform <span class="ext-link">↗</span>
+                    </a>
+                  </h3>
+                  <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">SD1.5</span>
+                  </div>
                 </div>
+                <p class="project-desc">Interactive platform that generates images from textual scene descriptions using Stable Diffusion and retrieval-augmented generation.</p>
               </div>
-              <p class="project-desc">Interactive platform that generates images from textual scene descriptions using Stable Diffusion and retrieval-augmented generation.</p>
+              <div class="card-expanded-content">
+
+                <div class="card-detail">
+                  <p class="card-detail-text">An interactive web application that retrieves scene context from markdown files, generates a natural language description and a Stable Diffusion prompt using an LLM (DeepSeek), and then produces an AI-generated image with Stable Diffusion (SD1.5).
+
+                  <br>This project demonstrates the integration of RAG, LLMs, and generative image models in a full-stack environment, with attention to UX design and extensibility.
+                  </p>
+                </div>
+                <div class="card-media">
+                  <img src="resources/paladin.PNG">
+                </div>
+
+              </div>
             </div>
 
-            <div class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">
-                  <a href="https://github.com/NotEnoughSnow/MultiAgents\_SAR" target="_blank">
-                    Multi-Agents Search and Rescue <span class="ext-link">↗</span>
-                  </a>
-                </h3>
-                <div class="project-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Pytorch</span>
-                  <span class="tag">PettingZoo</span>
+            <!-- Multi-Agents Search and Rescue -->
+            <div class="project-card" data-card>
+              <div class="card-collapsed">
+                <span class="card-toggle-hint">click to expand</span>
+                <div class="project-card-header">
+                  <h3 class="project-name">
+                    <a href="https://github.com/NotEnoughSnow/MultiAgents_SAR" target="_blank" class="project-link">
+                      Multi-Agents Search and Rescue <span class="ext-link">↗</span>
+                    </a>
+                  </h3>
+                  <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Pytorch</span>
+                    <span class="tag">PettingZoo</span>
+                  </div>
                 </div>
+                <p class="project-desc">A search and rescue (SAR) implementation in PettingZoo with Pytorch.</p>
               </div>
-              <p class="project-desc">A search and rescue (SAR) implementation in PettingZoo with Pytorch.</p>
+              <div class="card-expanded-content">
+                <div class="card-detail">
+                  <p class="card-detail-text"></p>
+                </div>
+                <div class="card-media">
+                </div>
+
+              </div>
             </div>
 
-            <div class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">
-                  <a href="https://github.com/Nonnnman/DogWalkingDevelop" target="_blank">
-                    Dog Walkers Matching Website <span class="ext-link">↗</span>
-                  </a>
-                </h3>
-                <div class="project-tags">
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">MongoDB</span>
-                  <span class="tag">Express.js</span>
-                  <span class="tag">React.js</span>
-                <span class="tag">Node.js</span>
+            <!-- Dog Walkers Matching Website -->
+            <div class="project-card" data-card>
+              <div class="card-collapsed">
+                <span class="card-toggle-hint">click to expand</span>
+                <div class="project-card-header">
+                  <h3 class="project-name">
+                    <a href="https://github.com/Nonnnman/DogWalkingDevelop" target="_blank" class="project-link">
+                      Dog Walkers Matching Website <span class="ext-link">↗</span>
+                    </a>
+                  </h3>
+                  <div class="project-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Express.js</span>
+                    <span class="tag">React.js</span>
+                  <span class="tag">Node.js</span>
+                  </div>
                 </div>
+                <p class="project-desc">A Web service intended for matching dog walkers and dog owners locally.</p>
               </div>
-              <p class="project-desc">A Web service intended for matching dog walkers and dog owners locally.</p>
+              <div class="card-expanded-content">
+                <div class="card-detail">
+                  <p class="card-detail-text"></p>
+                </div>
+                <div class="card-media">
+                  <img src="resources/dog.PNG">
+                </div>
+
+              </div>
             </div>
 
           </div>
@@ -371,32 +478,7 @@
     </main>
   </div>
 
-  <script>
-    const buttons = document.querySelectorAll('.nav-btn');
-    const panels  = document.querySelectorAll('.tab-panel');
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.tab;
-
-        // Update buttons
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Swap panels
-        panels.forEach(p => {
-          if (p.id === 'tab-' + target) {
-            p.classList.add('active');
-          } else {
-            p.classList.remove('active');
-          }
-        });
-
-        // Scroll main back to top on tab switch
-        document.querySelector('.main').scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
+  <script src="main.js" defer></script>
 
 </body>
 </html>
